@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | GILLE Hotel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <nav>
+
+            <h1>GILLE Hotel</h1>
+
+            <ul>
+
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('rooms') }}">Rooms</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('gallery') }}">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">About</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('booking') }}">Booking</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         GALLERY PAGE
+    ========================================== -->
+
+    <main class="gallery-page">
+
+
+        <!-- =====================================
+             GALLERY INTRODUCTION
+        ====================================== -->
+
+        <section class="gallery-intro">
+
+            <h2>Hotel Gallery</h2>
+
+            <p>
+                Discover every corner of GILLE Hotel.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             GALLERY CATEGORY NAVIGATION
+        ====================================== -->
+
+        <nav class="gallery-navigation">
+
+
+            <!-- HOTEL -->
+
+            <div class="gallery-category-wrapper">
+
+                <button
+                    class="gallery-category active"
+                    data-category="hotel">
+
+                    Hotel
+
+                </button>
+
+
+                <div class="gallery-dropdown">
+
+                    <button
+                        class="gallery-subcategory"
+                        data-category="hotel">
+
+                        Hotel Exterior
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROOMS -->
+
+<div class="gallery-category-wrapper">
+
+    <button
+        class="gallery-category"
+        data-category="rooms">
+
+        Rooms
+
+    </button>
+
+
+    <div class="gallery-dropdown">
+
+        <button
+            class="gallery-subcategory"
+            data-category="bathrooms">
+
+            Bathrooms
+
+        </button>
+
+
+        <button
+            class="gallery-subcategory"
+            data-category="comfort-areas">
+
+            Comfort Areas
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+            <!-- DINING -->
+
+<div class="gallery-category-wrapper">
+
+    <button
+        class="gallery-category"
+        data-category="dining">
+
+        Dining
+
+    </button>
+
+
+    <div class="gallery-dropdown">
+
+        <button
+            class="gallery-subcategory"
+            data-category="restaurant">
+
+            Restaurant
+
+        </button>
+
+
+        <button
+            class="gallery-subcategory"
+            data-category="dining-area">
+
+            Dining Area
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- AMENITIES -->
+
+<div class="gallery-category-wrapper">
+
+    <button
+        class="gallery-category"
+        data-category="amenities">
+
+        Amenities
+
+    </button>
+
+
+    <div class="gallery-dropdown">
+
+        <button
+            class="gallery-subcategory"
+            data-category="pool">
+
+            Swimming Pool
+
+        </button>
+
+
+        <button
+            class="gallery-subcategory"
+            data-category="gym">
+
+            Fitness Center
+
+        </button>
+
+
+        <button
+            class="gallery-subcategory"
+            data-category="spa">
+
+            Spa & Massage
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+        <!-- =====================================
+             MAIN GALLERY IMAGE
+        ====================================== -->
+
+        <section class="gallery-display">
+
+
+            <!-- Previous -->
+
+            <button
+                class="gallery-arrow gallery-prev"
+                id="previousImage"
+                aria-label="Previous image">
+
+                &#10094;
+
+            </button>
+
+
+
+            <!-- Image -->
+
+            <img
+                id="galleryImage"
+                src="{{ url_for('static', filename='images/gallery/hotel/GILLE.jpg') }}"
+                alt="GILLE Hotel Exterior">
+
+
+
+            <!-- Next -->
+
+            <button
+                class="gallery-arrow gallery-next"
+                id="nextImage"
+                aria-label="Next image">
+
+                &#10095;
+
+            </button>
+
+
+
+            <!-- =================================
+                 IMAGE CAPTION
+            ================================== -->
+
+            <div class="gallery-caption">
+
+                <h3 id="galleryTitle">
+                    GILLE Grand Azure Hotel
+                </h3>
+
+                <p id="galleryDescription">
+                    A modern coastal hotel designed for
+                    comfort, relaxation, and unforgettable stays.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             IMAGE INDICATORS
+        ====================================== -->
+
+        <div
+            class="gallery-counter"
+            id="galleryCounter">
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

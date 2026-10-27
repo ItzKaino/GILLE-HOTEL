@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking | GILLE Hotel</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="site-header">
+    <nav>
+        <h1>GILLE Hotel</h1>
+
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('rooms') }}">Rooms</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main class="booking-page">
+
+    <!-- BOOKING HEADER -->
+    <section class="booking-hero">
+
+        <div class="booking-hero-content">
+
+            <p class="booking-label">
+                BOOK YOUR STAY
+            </p>
+
+            <h2>
+                Reserve Your Room
+            </h2>
+
+            <p>
+                Plan your stay at GILLE Hotel and enjoy a comfortable
+                coastal escape designed for relaxation.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING AREA -->
+    <section class="booking-section">
+
+        <!-- BOOKING FORM -->
+        <div class="booking-form-container">
+
+            <div class="booking-section-heading">
+
+                <p class="booking-label">
+                    RESERVATION DETAILS
+                </p>
+
+                <h2>
+                    Make a Reservation
+                </h2>
+
+                <p>
+                    Please provide your details below to request a room
+                    at GILLE Hotel.
+                </p>
+
+            </div>
+
+
+            <form class="booking-form">
+
+                <!-- ROOM SELECTION -->
+
+<div class="booking-room-selection">
+
+    <div class="booking-room-heading">
+
+        <p class="booking-label">
+            CHOOSE YOUR ROOM
+        </p>
+
+        <h2>
+            Select Your Accommodation
+        </h2>
+
+        <p>
+            Choose the room that best suits your stay.
+        </p>
+
+    </div>
+
+
+    <div class="booking-room-grid">
+
+
+        <!-- DELUXE ROOM -->
+
+        <article class="booking-room-card">
+
+            <img
+                src="{{ url_for('static', filename='images/deluxe/deluxelow.jpg') }}"
+                alt="Deluxe Room">
+
+            <div class="booking-room-card-content">
+
+                <h3>
+                    Deluxe Room
+                </h3>
+
+                <p class="booking-room-price">
+                    ₱3,200 <span>/ night</span>
+                </p>
+
+                <p>
+                    Comfortable accommodation for couples
+                    and solo travelers.
+                </p>
+
+                <p>
+                    <strong>Guests:</strong> 2
+                </p>
+
+                <button
+                    type="button"
+                    class="booking-room-select"
+                    data-room="Deluxe Room"
+                    data-price="3200">
+
+                    Select Room
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- SUPERIOR ROOM -->
+
+        <article class="booking-room-card">
+
+            <img
+                src="{{ url_for('static', filename='images/rooms/superior/superiorlow.jpg') }}"
+                alt="Superior Room">
+
+            <div class="booking-room-card-content">
+
+                <h3>
+                    Superior Room
+                </h3>
+
+                <p class="booking-room-price">
+                    ₱4,100 <span>/ night</span>
+                </p>
+
+                <p>
+                    Additional space and upgraded amenities
+                    for a peaceful stay.
+                </p>
+
+                <p>
+                    <strong>Guests:</strong> 2
+                </p>
+
+                <button
+                    type="button"
+                    class="booking-room-select"
+                    data-room="Superior Room"
+                    data-price="4100">
+
+                    Select Room
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- EXECUTIVE ROOM -->
+
+        <article class="booking-room-card">
+
+            <img
+                src="{{ url_for('static', filename='images/rooms/executive/executivelow.webp') }}"
+                alt="Executive Room">
+
+            <div class="booking-room-card-content">
+
+                <h3>
+                    Executive Room
+                </h3>
+
+                <p class="booking-room-price">
+                    ₱5,300 <span>/ night</span>
+                </p>
+
+                <p>
+                    A spacious room suitable for business
+                    travelers and couples.
+                </p>
+
+                <p>
+                    <strong>Guests:</strong> 2
+                </p>
+
+                <button
+                    type="button"
+                    class="booking-room-select"
+                    data-room="Executive Room"
+                    data-price="5300">
+
+                    Select Room
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- FAMILY SUITE -->
+
+        <article class="booking-room-card">
+
+            <img
+                src="{{ url_for('static', filename='images/rooms/family/familymid.jpg') }}"
+                alt="Family Suite">
+
+            <div class="booking-room-card-content">
+
+                <h3>
+                    Family Suite
+                </h3>
+
+                <p class="booking-room-price">
+                    ₱6,800 <span>/ night</span>
+                </p>
+
+                <p>
+                    A spacious suite designed for families
+                    and small groups.
+                </p>
+
+                <p>
+                    <strong>Guests:</strong> 4
+                </p>
+
+                <button
+                    type="button"
+                    class="booking-room-select"
+                    data-room="Family Suite"
+                    data-price="6800">
+
+                    Select Room
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- HONEYMOON SUITE -->
+
+        <article class="booking-room-card">
+
+            <img
+                src="{{ url_for('static', filename='images/rooms/honeymoon/honeymoonlow.jpg') }}"
+                alt="Honeymoon Suite">
+
+            <div class="booking-room-card-content">
+
+                <h3>
+                    Honeymoon Suite
+                </h3>
+
+                <p class="booking-room-price">
+                    ₱8,900 <span>/ night</span>
+                </p>
+
+                <p>
+                    A romantic suite created for couples
+                    celebrating special moments.
+                </p>
+
+                <p>
+                    <strong>Guests:</strong> 2
+                </p>
+
+                <button
+                    type="button"
+                    class="booking-room-select"
+                    data-room="Honeymoon Suite"
+                    data-price="8900">
+
+                    Select Room
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRESIDENTIAL SUITE -->
+
+        <article class="booking-room-card">
+
+            <img
+                src="{{ url_for('static', filename='images/rooms/presidential/Presidentiallow.jpg') }}"
+                alt="Presidential Suite">
+
+            <div class="booking-room-card-content">
+
+                <h3>
+                    Presidential Suite
+                </h3>
+
+                <p class="booking-room-price">
+                    ₱12,500 <span>/ night</span>
+                </p>
+
+                <p>
+                    Spacious accommodation with premium
+                    facilities and exceptional comfort.
+                </p>
+
+                <p>
+                    <strong>Guests:</strong> 4
+                </p>
+
+                <button
+                    type="button"
+                    class="booking-room-select"
+                    data-room="Presidential Suite"
+                    data-price="12500">
+
+                    Select Room
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+
+                <!-- SPECIAL REQUEST -->
+                <div class="booking-form-group booking-message">
+
+                    <label for="requests">
+                        Special Requests
+                    </label>
+
+                    <textarea
+                        id="requests"
+                        name="requests"
+                        rows="5"
+                        placeholder="Any special requests or additional information?"></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="booking-submit-button">
+
+                    Confirm Booking
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- BOOKING INFORMATION -->
+        <aside class="booking-information">
+
+            <p class="booking-label">
+                BEFORE YOU BOOK
+            </p>
+
+            <h2>
+                Stay Information
+            </h2>
+
+
+            <div class="booking-info-item">
+
+                <h3>
+                    Check-in
+                </h3>
+
+                <p>
+                    From 2:00 PM
+                </p>
+
+            </div>
+
+
+            <div class="booking-info-item">
+
+                <h3>
+                    Check-out
+                </h3>
+
+                <p>
+                    Until 12:00 PM
+                </p>
+
+            </div>
+
+
+            <div class="booking-info-item">
+
+                <h3>
+                    Front Desk
+                </h3>
+
+                <p>
+                    Available 24 hours a day for hotel guests.
+                </p>
+
+            </div>
+
+
+            <div class="booking-info-item">
+
+                <h3>
+                    Need Help?
+                </h3>
+
+                <p>
+                    Contact our team if you have questions about
+                    rooms, availability, or your stay.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+</body>
+</html>

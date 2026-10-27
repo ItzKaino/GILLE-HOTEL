@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | GILLE Hotel</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <nav>
+
+            <h1>GILLE Hotel</h1>
+
+            <ul>
+
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('rooms') }}">Rooms</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('gallery') }}">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">About</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('booking') }}">Booking</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTACT PAGE
+    ========================================== -->
+
+    <main class="contact-page">
+
+
+        <!-- =====================================
+             CONTACT INTRO
+        ====================================== -->
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <h5 class="contact-label">
+                    GET IN TOUCH
+                </h5>
+
+                <h2>
+                    Contact GILLE Hotel
+                </h2>
+                </div>
+
+                <div class="contact-about-content">
+                <p>
+                    Have a question about your upcoming
+                    stay or planning a future getaway?
+                    Our dedicated guest experience team is
+                    here to assist you every step of the way.
+                    Whether you need help securing a reservation,
+                    exploring our hotel amenities and dining options,
+                    or arranging special accommodations for your trip,
+                    we are just a message or call away. Reach out to
+                    us anytime—we look forward to making your stay exceptional."
+                </p>
+
+            </div>
+
+            
+        </section>
+
+
+
+        <!-- =====================================
+             CONTACT INFORMATION
+        ====================================== -->
+
+        <section class="contact-information">
+
+            <div class="contact-section-heading">
+
+                <p class="contact-label">
+                    CONTACT INFORMATION
+                </p>
+
+                <h2>
+                    We're Here to Help
+                </h2>
+
+            </div>
+
+
+            <div class="contact-info-grid">
+
+
+                <!-- Address -->
+
+                <article class="contact-info-card">
+
+                    <h3>
+                        Address
+                    </h3>
+
+                    <p>
+                        GILLE Grand Azure Hotel
+                    </p>
+
+                    <p>
+                        Pelaez St, Bogo City
+                    </p>
+
+                </article>
+
+
+
+                <!-- Phone -->
+
+                <article class="contact-info-card">
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        +63 975 424 8097
+                    </p>
+
+                    <p>
+                        Available daily from 8:00 AM
+                        to 10:00 PM
+                    </p>
+
+                </article>
+
+
+
+                <!-- Email -->
+
+                <article class="contact-info-card">
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        lancesusvilla@gmail.com
+                    </p>
+
+                    <p>
+                        We usually respond within
+                        one business day.
+                    </p>
+
+                </article>
+
+
+
+                <!-- Hours -->
+
+                <article class="contact-info-card">
+
+                    <h3>
+                        Front Desk Hours
+                    </h3>
+
+                    <p>
+                        Open 24 Hours
+                    </p>
+
+                    <p>
+                        Our front desk is available
+                        for guests at any time.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTACT FORM
+        ====================================== -->
+
+        <section class="contact-form-section">
+
+            <div class="contact-form-heading">
+
+                <p class="contact-label">
+                    SEND US A MESSAGE
+                </p>
+
+                <h2>
+                    We'd Love to Hear From You
+                </h2>
+
+                <p>
+                    Send us your questions or requests
+                    and our team will get back to you.
+                </p>
+
+            </div>
+
+
+            <form class="contact-form">
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
+
+                </div>
+
+
+
+                <!-- Subject -->
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What would you like to ask?"
+                        required>
+
+                </div>
+
+
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="contact-submit-button">
+
+                    Send Message
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LOCATION
+        ====================================== -->
+
+        <section class="contact-location">
+
+            <div class="contact-location-content">
+
+                <p class="contact-label">
+                    FIND US
+                </p>
+
+                <h2>
+                    Visit GILLE Hotel
+                </h2>
+
+                <p>
+                    Located near the coast, GILLE Hotel
+                    offers a peaceful destination where
+                    guests can relax and enjoy their stay.
+                </p>
+
+            </div>
+
+            <div class="contact-location-map">
+
+                <div class="map-placeholder">
+
+                    <p>
+                        GILLE Hotel Location
+                    </p>
+
+                    <span>
+                        Azure Bay, Coastal Road
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>

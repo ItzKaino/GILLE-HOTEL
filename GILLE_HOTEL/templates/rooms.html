@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rooms | GILLE Hotel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <nav>
+
+            <h1>GILLE Hotel</h1>
+
+            <ul>
+
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('rooms') }}">Rooms</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('gallery') }}">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">About</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('booking') }}">Booking</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="rooms-page">
+
+        <!-- Page Header -->
+        <section class="page-header">
+           
+            <center>
+            <p class="welcome">
+            <span>==========></span>
+            ACCOMMODATION
+            <span><==========</span>
+            </p>
+            </center>
+
+            <h2>Our Rooms & Suites</h2>
+
+            <p>
+                Explore our selection of comfortable and elegant rooms,
+                designed to provide a relaxing stay at GILLE Hotel.
+            </p>
+
+        </section>
+
+
+        <!-- Room Selection -->
+        <section class="room-selection">
+
+
+            <!-- =========================================
+                 LEFT SIDE - ROOM TYPES
+                 ========================================= -->
+
+            <section class="room-types">
+
+                <h2>Room Types</h2>
+
+
+                <button class="room-option active"
+                        data-room="deluxe">
+
+                    <span>›</span>
+
+                    Deluxe Room
+
+                </button>
+
+
+                <button class="room-option"
+                        data-room="superior">
+
+                    <span>›</span>
+
+                    Superior Room
+
+                </button>
+
+
+                <button class="room-option"
+                        data-room="executive">
+
+                    <span>›</span>
+
+                    Executive Room
+
+                </button>
+
+
+                <button class="room-option"
+                        data-room="family">
+
+                    <span>›</span>
+
+                    Family Suite
+
+                </button>
+
+
+                <button class="room-option"
+                        data-room="honeymoon">
+
+                    <span>›</span>
+
+                    Honeymoon Suite
+
+                </button>
+
+
+                <button class="room-option"
+                        data-room="presidential">
+
+                    <span>›</span>
+
+                    Presidential Suite
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 RIGHT SIDE - ROOM DISPLAY
+                 ========================================= -->
+
+            <section class="room-display">
+
+
+                <!-- =====================================
+                     DELUXE ROOM
+                     ===================================== -->
+
+                <article class="room-content active"
+                         id="deluxe">
+
+
+                    <!-- Room Image Gallery -->
+
+                    <div class="room-gallery">
+
+                        <button class="gallery-arrow gallery-prev"
+                                onclick="changeRoomImage(-1)"
+                                aria-label="Previous image">
+
+                            &#10094;
+
+                        </button>
+
+
+                        <img
+                            class="roomImage"
+                            src="{{ url_for('static', filename='images/deluxe/deluxelow.jpg') }}"
+                            alt="Deluxe Room"
+                        >
+
+
+                        <button class="gallery-arrow gallery-next"
+                                onclick="changeRoomImage(1)"
+                                aria-label="Next image">
+
+                            &#10095;
+
+                        </button>
+
+
+                        <!-- Image Numbers -->
+
+                        <div class="image-counter">
+
+                            <button class="image-number active"
+                                    onclick="showRoomImage(0)">
+                                1
+                            </button>
+
+                            <button class="image-number"
+                                    onclick="showRoomImage(1)">
+                                2
+                            </button>
+
+                            <button class="image-number"
+                                    onclick="showRoomImage(2)">
+                                3
+                            </button>
+
+                            <button class="image-number"
+                                    onclick="showRoomImage(3)">
+                                4
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Room Information -->
+
+                    <section class="room-details">
+
+                        <h2 id="roomTitle">
+                            Deluxe Room
+                        </h2>
+
+
+                        <p id="roomDescription">
+                            A comfortable and stylish room designed for
+                            couples and solo travelers looking for a
+                            relaxing stay.
+                        </p>
+
+
+                        <p>
+                            <strong>Guests:</strong>
+                            2
+                        </p>
+
+
+                        <p>
+                            <strong>Amenities:</strong>
+
+                            Free Wi-Fi,
+                            Air Conditioning,
+                            TV,
+                            Mini Refrigerator
+
+                        </p>
+
+
+                        <p class="room-price">
+
+                            ₱3,200
+
+                            <span>/ night</span>
+
+                        </p>
+
+                        <a href="{{ url_for('booking', room='Deluxe Room') }}">Book This Room</a>>
+                
+
+                    </section>
+
+                </article>
+
+
+
+                <!-- =====================================
+                SUPERIOR ROOM
+                ===================================== -->
+
+                <article class="room-content"
+                         id="superior">
+
+
+                    <!-- Room Image Gallery -->
+
+                    <div class="room-gallery">
+
+                        <button class="gallery-arrow gallery-prev"
+                                onclick="changeRoomImage(-1)"
+                                aria-label="Previous image">
+
+                            &#10094;
+
+                        </button>
+
+                        <img
+                            class="roomImage"
+                            src="{{ url_for('static', filename='images/rooms/superior/superiorlow.jpg/') }}"
+                            alt="Superior Room"
+                        >
+
+
+                        <button class="gallery-arrow gallery-next"
+                                onclick="changeRoomImage(1)"
+                                aria-label="Next image">
+
+                            &#10095;
+
+                        </button>
+
+
+                        <!-- Image Numbers -->
+
+                        <div class="image-counter">
+
+                            <button class="image-number active"
+                                    onclick="showRoomImage(0)">
+                                1
+                            </button>
+
+                            <button class="image-number"
+                                    onclick="showRoomImage(1)">
+                                2
+                            </button>
+
+                            <button class="image-number"
+                                    onclick="showRoomImage(2)">
+                                3
+                            </button>
+
+                            <button class="image-number"
+                                    onclick="showRoomImage(3)">
+                                4
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <section class="room-details">
+
+                        <!-- Room Information -->
+                        <h2>
+                            Superior Room
+                        </h2>
+
+                        <p>
+                            Enjoy additional space and upgraded amenities
+                            for a more comfortable and peaceful experience.
+                        </p>
+
+                        <p>
+                            <strong>Guests:</strong>
+                            2
+                        </p>
+
+                        <p>
+                            <strong>Amenities:</strong>
+
+                            Free Wi-Fi,
+                            Smart TV,
+                            Coffee Maker,
+                            Work Desk
+
+                        </p>
+
+                        <p class="room-price">
+
+                            ₱4,100
+
+                            <span>/ night</span>
+
+                        </p>
+
+                        <a href="{{ url_for('booking', room='Superior Room') }}">Book This Room</a>
+
+                    </section>
+
+                </article>
+
+<!-- =====================================
+     EXECUTIVE ROOM
+     ===================================== -->
+
+<article class="room-content"
+         id="executive">
+
+    <!-- Room Image Gallery -->
+
+    <div class="room-gallery">
+
+        <button class="gallery-arrow gallery-prev"
+                onclick="changeRoomImage(-1)"
+                aria-label="Previous image">
+
+            &#10094;
+
+        </button>
+
+
+        <img
+            class="roomImage"
+            src="{{ url_for('static', filename='images/rooms/executive/executivelow.webp') }}"
+            alt="Executive Room"
+        >
+
+
+        <button class="gallery-arrow gallery-next"
+                onclick="changeRoomImage(1)"
+                aria-label="Next image">
+
+            &#10095;
+
+        </button>
+
+
+        <!-- Image Numbers -->
+
+        <div class="image-counter">
+
+            <button class="image-number active"
+                    onclick="showRoomImage(0)">
+                1
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(1)">
+                2
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(2)">
+                3
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(3)">
+                4
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(4)">
+                5
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(5)">
+                6
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(6)">
+                7
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Room Information -->
+
+    <section class="room-details">
+
+        <h2>
+            Executive Room
+        </h2>
+
+        <p>
+            A premium room offering a spacious environment
+            suitable for business travelers and couples.
+        </p>
+
+        <p>
+            <strong>Guests:</strong>
+            2
+        </p>
+
+        <p>
+            <strong>Amenities:</strong>
+
+            High-Speed Wi-Fi,
+            Smart TV,
+            Mini Bar,
+            Work Desk
+
+        </p>
+
+        <p class="room-price">
+
+            ₱5,300
+
+            <span>/ night</span>
+
+        </p>
+
+        <a href="{{ url_for('booking', room='Executive Room') }}">Book This Room</a>
+
+    </section>
+
+</article>
+
+
+        <!-- =====================================
+     FAMILY SUITE
+     ===================================== -->
+
+<article class="room-content"
+         id="family">
+
+    <!-- Room Image Gallery -->
+
+    <div class="room-gallery">
+
+        <button class="gallery-arrow gallery-prev"
+                onclick="changeRoomImage(-1)"
+                aria-label="Previous image">
+
+            &#10094;
+
+        </button>
+
+
+        <img
+            class="roomImage"
+            src="{{ url_for('static', filename='images/rooms/family/familymid.jpg') }}"
+            alt="Family Suite"
+        >
+
+
+        <button class="gallery-arrow gallery-next"
+                onclick="changeRoomImage(1)"
+                aria-label="Next image">
+
+            &#10095;
+
+        </button>
+
+
+        <!-- Image Numbers -->
+
+        <div class="image-counter">
+
+            <button class="image-number active"
+                    onclick="showRoomImage(0)">
+                1
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(1)">
+                2
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(2)">
+                3
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Room Information -->
+
+    <section class="room-details">
+
+        <h2>
+            Family Suite
+        </h2>
+
+        <p>
+            A spacious suite designed for families and
+            small groups who want comfort and convenience.
+        </p>
+
+        <p>
+            <strong>Guests:</strong>
+            4
+        </p>
+
+        <p>
+            <strong>Amenities:</strong>
+
+            Two Beds,
+            Free Wi-Fi,
+            TV,
+            Living Area,
+            Refrigerator
+
+        </p>
+
+        <p class="room-price">
+
+            ₱6,800
+
+            <span>/ night</span>
+
+        </p>
+
+       <a href="{{ url_for('booking', room='Family Suite') }}">Book This Room</a>
+
+    </section>
+
+</article>
+    <!-- =====================================
+     HONEYMOON SUITE
+     ===================================== -->
+
+<article class="room-content"
+         id="honeymoon">
+
+    <!-- Room Image Gallery -->
+
+    <div class="room-gallery">
+
+        <button class="gallery-arrow gallery-prev"
+                onclick="changeRoomImage(-1)"
+                aria-label="Previous image">
+
+            &#10094;
+
+        </button>
+
+
+        <img
+            class="roomImage"
+            src="{{ url_for('static', filename='images/rooms/honeymoon/honeymoonlow.jpg') }}"
+            alt="Honeymoon Suite"
+        >
+
+
+        <button class="gallery-arrow gallery-next"
+                onclick="changeRoomImage(1)"
+                aria-label="Next image">
+
+            &#10095;
+
+        </button>
+
+
+        <!-- Image Numbers -->
+
+        <div class="image-counter">
+
+            <button class="image-number active"
+                    onclick="showRoomImage(0)">
+                1
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(1)">
+                2
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(2)">
+                3
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(3)">
+                4
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(4)">
+                5
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Room Information -->
+
+    <section class="room-details">
+
+        <h2>
+            Honeymoon Suite
+        </h2>
+
+        <p>
+            A romantic and elegant suite created for couples
+            celebrating special moments together.
+        </p>
+
+        <p>
+            <strong>Guests:</strong>
+            2
+        </p>
+
+        <p>
+            <strong>Amenities:</strong>
+
+            King Bed,
+            Bathtub,
+            Balcony,
+            Mini Bar,
+            Room Service
+
+        </p>
+
+        <p class="room-price">
+
+            ₱8,900
+
+            <span>/ night</span>
+
+        </p>
+
+        <a href="{{ url_for('booking', room='Honeymoon Suite') }}">Book This Room</a>
+
+    </section>
+
+</article>
+
+                <!-- =====================================
+                     PRESIDENTIAL SUITE
+                     ===================================== -->
+
+                <article class="room-content"
+                         id="presidential">
+
+                    <!-- Room Image Gallery -->
+
+            <div class="room-gallery">
+
+                <button class="gallery-arrow gallery-prev"
+                onclick="changeRoomImage(-1)"
+                aria-label="Previous image">
+                &#10094;
+                </button>
+
+        <img
+            class="roomImage"
+            src="{{ url_for('static', filename='images/rooms/presidential/Presidentiallow.jpg') }}"
+            alt="Presidential Suite"
+        >
+
+        <button class="gallery-arrow gallery-next"
+                onclick="changeRoomImage(1)"
+                aria-label="Next image">
+                 &#10095;
+                 </button>
+
+                <!-- Image Numbers -->
+
+        <div class="image-counter">
+
+            <button class="image-number active"
+                    onclick="showRoomImage(0)">
+                1
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(1)">
+                2
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(2)">
+                3
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(3)">
+                4
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(4)">
+                5
+            </button>
+
+            <button class="image-number"
+                    onclick="showRoomImage(5)">
+                6
+            </button>
+
+        </div>
+
+    </div>
+
+                    <!-- Room Information -->
+
+                    <section class="room-details">
+
+                        <h2>
+                            Presidential Suite
+                        </h2>
+
+                        <p>
+                            Our most luxurious accommodation featuring
+                            premium facilities, spacious living areas,
+                            and exceptional comfort.
+                        </p>
+
+                        <p>
+                            <strong>Guests:</strong>
+                            4
+                        </p>
+
+                        <p>
+                            <strong>Amenities:</strong>
+
+                            King Bed,
+                            Living Room,
+                            Private Balcony,
+                            Jacuzzi,
+                            Mini Bar,
+                            Premium Room Service
+
+                        </p>
+
+                        <p class="room-price">
+
+                            ₱12,500
+
+                            <span>/ night</span>
+
+                        </p>
+
+                        <a href="{{ url_for('booking', room='Presidential Suite') }}">Book This Room</a>
+                    </section>
+
+                </article>
+
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 GILLE Hotel.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Comfort. Luxury. Hospitality.
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

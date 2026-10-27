@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | GILLE Hotel</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+         <nav>
+
+            <h1>GILLE Hotel</h1>
+
+            <ul>
+
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('rooms') }}">Rooms</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('gallery') }}">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">About</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('booking') }}">Booking</a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+
+
+    <!-- =========================================
+         ABOUT PAGE
+    ========================================== -->
+
+    <main class="about-page">
+
+
+        <!-- =====================================
+             ABOUT INTRODUCTION
+        ====================================== -->
+
+        <section class="about-hero">
+
+            <div class="about-hero-content">
+
+                <p class="about-label">
+                    WELCOME TO GILLE HOTEL
+                </p>
+
+                <h2>
+                    About GILLE Grand Azure Hotel
+                </h2>
+
+                <p>
+                    A modern coastal hotel created for guests
+                    who value comfort, relaxation, and genuine
+                    hospitality.
+                </p>
+
+            </div>
+
+
+            <div class="about-hero-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/gallery/hotel/GILLE.jpg') }}"
+                    alt="GILLE Grand Azure Hotel exterior">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             OUR STORY
+        ====================================== -->
+
+        <section class="about-story">
+
+            <div class="about-section-heading">
+
+                <p class="about-label">
+                    OUR STORY
+                </p>
+
+                <h2>
+                    A Hotel Inspired by the Coast
+                </h2>
+
+            </div>
+
+
+            <div class="about-story-content">
+
+                <p>
+                    GILLE Grand Azure Hotel was created with
+                    a simple idea: to give guests a comfortable
+                    place to stay while keeping them close to
+                    the beauty of the coast.
+                </p>
+
+
+                <p>
+                    From our welcoming rooms to our relaxed
+                    dining spaces and ocean-facing amenities,
+                    every part of the hotel is designed to
+                    create a peaceful and enjoyable experience.
+                </p>
+
+
+                <p>
+                    Whether you are travelling with family,
+                    spending time with someone special, or
+                    simply taking a break from everyday life,
+                    GILLE Hotel offers a place where you can
+                    slow down and enjoy your stay.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             OUR PHILOSOPHY
+        ====================================== -->
+
+        <section class="about-philosophy">
+
+            <div class="about-section-heading">
+
+                <p class="about-label">
+                    OUR PHILOSOPHY
+                </p>
+
+                <h2>
+                    What We Believe In
+                </h2>
+
+            </div>
+
+
+            <div class="philosophy-cards">
+
+
+                <!-- Comfort -->
+
+                <div class="about-philosophy-intro">
+                <article class="philosophy-card">
+
+                    <h3>
+                        Comfort
+                    </h3>
+
+                    <p>
+                        Comfortable rooms, thoughtful amenities,
+                        and relaxing spaces designed to make
+                        every stay feel easy.
+                    </p>
+
+                </article>
+                </div>
+
+
+                <!-- Hospitality -->
+
+                <article class="philosophy-card">
+
+                    <h3>
+                        Hospitality
+                    </h3>
+
+                    <p>
+                        Friendly and attentive service that
+                        makes every guest feel welcomed from
+                        arrival to departure.
+                    </p>
+
+                </article>
+
+
+
+                <!-- Coastal Living -->
+
+                <article class="philosophy-card">
+
+                    <h3>
+                        Coastal Living
+                    </h3>
+
+                    <p>
+                        A relaxed atmosphere inspired by the
+                        sea, natural surroundings, and the
+                        simple pleasure of slowing down.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             WHY GILLE
+        ====================================== -->
+
+        <section class="about-highlights">
+
+            <div class="about-highlights-image">
+
+                <img
+                    src="{{ url_for('static', filename='images/gallery/ameneties/swimmingpool.jpg') }}"
+                    alt="GILLE Hotel swimming pool">
+
+            </div>
+
+
+            <div class="about-highlights-content">
+
+                <p class="about-label">
+                    WHY GILLE?
+                </p>
+
+                <h2>
+                    Everything You Need for a Relaxing Stay
+                </h2>
+
+                <p>
+                    Our hotel combines comfortable accommodation
+                    with convenient facilities and spaces where
+                    guests can relax, dine, and enjoy their time
+                    by the coast.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Comfortable and thoughtfully designed rooms
+                    </li>
+
+                    <li>
+                        Ocean-inspired dining and relaxation spaces
+                    </li>
+
+                    <li>
+                        Swimming pool, fitness center, and spa
+                    </li>
+
+                    <li>
+                        Friendly service and convenient amenities
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CLOSING SECTION
+        ====================================== -->
+
+        <section class="about-closing">
+
+            <p class="about-label">
+                YOUR STAY, YOUR WAY
+            </p>
+
+            <h2>
+                Come Stay With Us
+            </h2>
+
+            <p>
+                Whether you're here for a short escape,
+                a family holiday, or a special occasion,
+                GILLE Hotel is ready to welcome you.
+            </p>
+
+            <a
+                href="{{ url_for('booking') }}"
+                class="about-booking-button">
+
+                Book Your Stay
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GILLE Hotel</title>
+
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <nav>
+            <h1>GILLE Hotel</h1>
+
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('rooms') }}">Rooms</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <article class="hero-content">
+
+                <p class="welcome">WELCOME TO GILLE HOTEL</p>
+
+                <h2>Where Comfort Meets Luxury</h2>
+
+                <p>
+                    Experience a relaxing stay at Azure Haven Hotel,
+                    where elegant rooms, exceptional service, and modern
+                    amenities come together to make your stay unforgettable.
+                </p>
+
+                <a href="{{ url_for('booking') }}" class="button">
+                    Book Your Stay
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- Introduction -->
+        <section class="introduction">
+
+            <h2>Welcome to Azure Haven Hotel</h2>
+
+            <p>
+                Whether you're traveling for business, enjoying a family
+                vacation, or looking for a peaceful getaway, Azure Haven
+                Hotel provides a comfortable and memorable experience.
+            </p>
+
+        </section>
+
+
+        <!-- Featured Rooms -->
+        <section class="featured-rooms">
+
+            <h2>Our Featured Rooms</h2>
+
+            <p>
+                Choose from our carefully designed rooms and suites,
+                created to provide comfort, privacy, and relaxation.
+            </p>
+
+            <article class="room-preview">
+
+                <h3>Deluxe Room</h3>
+
+                <p>
+                    A comfortable room perfect for couples and solo travelers.
+                </p>
+
+                <p><strong>₱3,200 / night</strong></p>
+
+                <a href="{{ url_for('rooms') }}">View Room</a>
+
+            </article>
+
+
+            <article class="room-preview">
+
+                <h3>Family Suite</h3>
+
+                <p>
+                    A spacious suite designed for families and small groups.
+                </p>
+
+                <p><strong>₱6,800 / night</strong></p>
+
+                <a href="{{ url_for('rooms') }}">View Room</a>
+
+            </article>
+
+
+            <article class="room-preview">
+
+                <h3>Presidential Suite</h3>
+
+                <p>
+                    Our most luxurious accommodation with premium facilities.
+                </p>
+
+                <p><strong>₱12,500 / night</strong></p>
+
+                <a href="{{ url_for('rooms') }}">View Room</a>
+
+            </article>
+
+        </section>
+
+
+        <!-- Amenities -->
+        <section class="amenities">
+
+            <h2>Hotel Amenities</h2>
+
+            <ul>
+                <li>Free Wi-Fi</li>
+                <li>Swimming Pool</li>
+                <li>Free Wives</li>
+                <li>Fitness Center</li>
+                <li>24/7 Front Desk</li>
+                <li>Restaurant</li>
+                <li>Free Parking</li>
+            </ul>
+
+        </section>
+
+
+        <!-- Reviews -->
+        <section class="reviews">
+
+            <h2>What Our Guests Say</h2>
+
+            <article>
+
+                <blockquote>
+                    "OH my SHIII!"
+                </blockquote>
+
+                <p><strong>— Karl Varga</strong></p>
+
+            </article>
+
+
+            <article>
+
+                <blockquote>
+                    "Lami Kaayu Tulgan ug balik da!"
+                </blockquote>
+
+                <p><strong>— Kim Xyril Munez</strong></p>
+
+            </article>
+
+
+            <article>
+
+                <blockquote>
+                    "Magda nya kug uyab sunod ari"
+                </blockquote>
+
+                <p><strong>— Garry Mansuling</strong></p>
+
+            </article>
+
+             <article>
+
+                <blockquote>
+                    "Mura mag 5 STAR HOTEL!"
+                </blockquote>
+
+                <p><strong>— Julian Sulit</strong></p>
+
+            </article>
+
+             <article>
+
+                <blockquote>
+                    "I wanna build a gaming setup here next time!"
+                </blockquote>
+
+                <p><strong>— Gian Marigomen</strong></p>
+
+            </article>  
+
+             <article>
+
+                <blockquote>
+                    "Ako may Owner... nganu nag comment man ko ari? 🤔"
+                </blockquote>
+
+                <p><strong>— Lance Susvilla</strong></p>
+
+            </article>
+
+        </section>
+
+
+        <!-- Booking Call To Action -->
+        <section class="booking-call">
+
+            <h2>Ready for Your Stay?</h2>
+
+            <p>
+                Make your next trip special with a relaxing stay
+                at Azure Haven Hotel.
+            </p>
+
+            <a href="{{ url_for('booking') }}" class="button">
+                Reserve Your Room
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Azure Haven Hotel. All Rights Reserved.
+        </p>
+
+        <p>
+            Comfort. Luxury. Hospitality.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
